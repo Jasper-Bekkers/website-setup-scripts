@@ -13,5 +13,6 @@ mkdir -p /var/www/html/$WEBSITE_NAME/public_html
 touch /var/www/html/$WEBSITE_NAME/public_html/index.html
 
 git init --bare /srv/git/$WEBSITE_NAME/$WEBSITE_NAME.git
+chown -R www-data /srv/git/$WEBSITE_NAME/$WEBSITE_NAME.git
 
 service nginx restart
