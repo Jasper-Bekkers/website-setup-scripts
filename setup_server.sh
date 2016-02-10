@@ -1,5 +1,5 @@
 #!/bin/bash
-apt-get install nginx ruby vim git git-core nginx fcgiwrap apache2-utils
+apt-get install nginx ruby ruby-dev vim git git-core nginx fcgiwrap apache2-utils gcc make
 gem install jekyll
 
 echo "*****************************"
