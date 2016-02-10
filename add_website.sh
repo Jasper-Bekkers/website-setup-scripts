@@ -10,7 +10,10 @@ sed -e s/example.com/$WEBSITE_NAME/g website_config.txt > /etc/nginx/sites-avail
 
 ln -s /etc/nginx/sites-available/$WEBSITE_NAME /etc/nginx/sites-enabled/
 mkdir -p /var/www/html/$WEBSITE_NAME/public_html
+mkdir -p /var/www/html/$WEBSITE_NAME/conf
 touch /var/www/html/$WEBSITE_NAME/public_html/index.html
+sed -e s/example.com/$WEBSITE_NAME/g gitweb.conf > /var/www/html/$WEBSITE_NAME/conf/gitweb.conf
+
 
 git init --bare /srv/git/$WEBSITE_NAME/$WEBSITE_NAME.git
 chown -R www-data /srv/git/$WEBSITE_NAME/$WEBSITE_NAME.git
