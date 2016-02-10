@@ -12,4 +12,6 @@ ln -s /etc/nginx/sites-available/$WEBSITE_NAME /etc/nginx/sites-enabled/
 mkdir -p /var/www/html/$WEBSITE_NAME/public_html
 touch /var/www/html/$WEBSITE_NAME/public_html/index.html
 
+git init --bare /srv/git/$WEBSITE_NAME/$WEBSITE_NAME.git
+
 service nginx restart
